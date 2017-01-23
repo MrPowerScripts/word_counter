@@ -68,6 +68,7 @@ export default class Site extends React.Component{
     // get the top 100 words
     var list = words_fixed.slice(0, 100)
 
+
     var wordGroups = []
     list.forEach(item => {
 
@@ -78,6 +79,7 @@ export default class Site extends React.Component{
       wordGroups[item.value].words.push(item.key)
     })
 
+    // merge words with similar frequency together
     var normalizedGroups = Object.keys(wordGroups).map(key => {
       return (
         {count: parseInt(key), words: wordGroups[key].words}
@@ -132,9 +134,20 @@ export default class Site extends React.Component{
           <div key={item.count} className="site-data-item-container">
             <div className="site-data-bar" style={{width: `${item.scaled_value}%`}}/>
             <div className="site-data-item">
-              {`${item.count}`}
+              <div className="word-count">{`${item.count}`}</div>
+              <div className="word-list">{this.getWords(item.words)}</div>
             </div>
           </div>
+        )
+      })
+    )
+  }
+
+  getWords = (words) => {
+    return (
+      words.map(word => {
+        return (
+          <div key={word} className="word">{word}</div>
         )
       })
     )
@@ -158,9 +171,6 @@ export default class Site extends React.Component{
           <div className="site-data-stat">Total Words {this.state.totalValue}</div>
         </div>
         <div className="site-data">
-          <div classname="scale">
-            <div className="mid" />
-          </div>
           {this.getDataNodes()}
         </div>
       </div>
