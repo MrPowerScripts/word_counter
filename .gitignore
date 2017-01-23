@@ -1,0 +1,16 @@
+venv
+logs
+migrations
+.idea
+*.log
+*~
+*.pyc
+.DS_Store
+.keys
+common.js
+common.css
+common.jsx
+.webassets-cache
+node_modules
+tmp
+.cache

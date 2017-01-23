@@ -1,0 +1,212 @@
+.main {
+  height: 100vh;
+  display: flex;
+  padding: 1rem;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.url-input,
+.url-submit {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.last-updated {
+  margin-top: 1rem;
+}
+.history {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  width: 80vw;
+}
+.site-data-selector {
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  flex-grow: 1;
+  cursor: pointer;
+}
+.site-data-selector:hover {
+  color: #fff;
+  background-color: #d48a87;
+}
+.selected {
+  background-color: #bd5652;
+  color: #fff;
+}
+.site-data {
+  display: flex;
+  flex-flow: column wrap;
+}
+.site-data-stats {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.site-data-stat {
+  background-color: #fff;
+  margin-left: 0.5rem;
+  border-radius: 7px;
+  padding: 0.5rem;
+}
+.site-data-item-container {
+  width: 90vw;
+  height: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  word-wrap: break-word;
+}
+.site-data-item {
+  color: #000;
+}
+.site-data-bar {
+  transition: width 400ms ease;
+  background-color: #bd5652;
+  border-top: 1px solid #fff;
+  height: 100%;
+}
+@import url("http://fonts.googleapis.com/css?family=Nunito|Lora");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff3de;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Lora, 'Open Sans';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+blockquote {
+  font-family: Nunito;
+  margin: 0px;
+}
+.base-container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.base {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #6a8bd4;
+  height: 2rem;
+}
+.nav-action {
+  text-decoration: none;
+  color: #fff;
+}
+.site-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.site-content >div {
+  margin-top: 1rem;
+}
+.button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #3e317e;
+  background-color: #6a8bd4;
+  color: #fff;
+}
+.button:hover {
+  background-color: #4d679e;
+}
+@import url("http://fonts.googleapis.com/css?family=Nunito|Lora");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: #fff3de;
+}
+#root {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: Lora, 'Open Sans';
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+blockquote {
+  font-family: Nunito;
+  margin: 0px;
+}
+.base-container {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.base {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #6a8bd4;
+  height: 2rem;
+}
+.nav-action {
+  text-decoration: none;
+  color: #fff;
+}
+.site-content {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+.site-content >div {
+  margin-top: 1rem;
+}
+.button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 7px;
+  cursor: pointer;
+  border: 1px solid #3e317e;
+  background-color: #6a8bd4;
+  color: #fff;
+}
+.button:hover {
+  background-color: #4d679e;
+}
+
