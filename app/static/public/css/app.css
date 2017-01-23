@@ -1,5 +1,4 @@
 .main {
-  height: 100vh;
   display: flex;
   padding: 1rem;
   flex-flow: column wrap;
@@ -149,6 +148,7 @@ blockquote {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  padding-bottom: 15vh;
 }
 .site-content >div {
   margin-top: 1rem;
@@ -219,6 +219,7 @@ blockquote {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
+  padding-bottom: 15vh;
 }
 .site-content >div {
   margin-top: 1rem;
