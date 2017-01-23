@@ -1,0 +1,16 @@
+#!/bin/bash
+
+function set-title() {
+  if [[ -z "$ORIG" ]]; then
+    ORIG=$PS1
+  fi
+  TITLE="\[\e]2;$*\a\]"
+  PS1=${ORIG}${TITLE}
+}
+
+gnome-terminal \
+--tab -e "bash -c 'cd /home/rootuser/git/word_match; source venv/bin/activate; exec bash' "  \
+--tab -e "bash -c 'cd /home/rootuser/git/word_match; source venv/bin/activate; python manage.py liveserver; exec bash' "  \
+--tab -e "bash -c 'cd /home/rootuser/git/word_match; source venv/bin/activate; npm run dev; exec bash' "  \
+--tab -e "bash -c 'cd /home/rootuser/git/word_match; source venv/bin/activate; tail -f debug.log; exec bash' "  \
+--tab -e "bash -c 'cd /var/log/postgresql; tail -f postgresql.log; exec bash' "  \

@@ -1,0 +1,75 @@
+.history
+  display flex
+  flex-flow row wrap
+  justify-content space-around
+  width 80vw
+
+.site-data-selector
+  display flex
+  justify-content center
+  background-color white
+  padding-left 1rem
+  padding-right 1rem
+  padding-top .7rem
+  padding-bottom .7rem
+  flex-grow 1
+  cursor pointer
+  &:hover
+    color white
+    background-color #D48A87
+
+.selected
+  background-color #BD5652
+  color white
+
+.site-data
+  display flex
+  flex-flow column wrap
+
+.site-data-stats
+  display flex
+  width 100%
+  justify-content center
+
+.site-data-stat
+  background-color white
+  margin-left .5rem
+  border-radius 7px
+  border 1px solid rgba(0, 0, 0, 0.19)
+  padding .5rem
+
+.site-data-item-container
+  width 90vw
+  display flex
+  flex-flow column nowrap
+  word-wrap break-word
+  &:hover
+  &:active
+    .site-data-item
+      display flex
+    .site-data-bar
+      background-color #BD5652
+
+.site-data-item
+  color black
+  display none
+  flex-flow row wrap
+
+.site-data-bar
+  transition width 400ms ease
+  background-color #D48A87
+  border-top 1px solid white
+  height 1.5rem
+
+.word-count
+  padding .3rem
+
+.word-list
+  display flex
+  flex-flow row wrap
+
+.word
+  margin-left .3rem
+  background-color white
+  border 1px solid rgba(0, 0, 0, 0.19)
+  padding .3rem

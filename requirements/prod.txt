@@ -1,0 +1,68 @@
+# Everything needed in production
+
+# Imaging
+image==1.5.5
+
+# Flask
+Flask==0.10.1
+MarkupSafe==0.23
+Werkzeug==0.9.0
+Jinja2==2.8
+itsdangerous==0.24
+Flask-Mobility==0.1.1
+
+# Management
+Flask-Admin==1.4.2
+
+# Compatibility
+Flask-Triangle==0.5.4
+
+# Parsing
+beautifulsoup4==4.5.1
+
+# Python
+requests==2.9.1
+mistune==0.7.2
+pathlib==1.0.1
+
+# Login
+Flask-Login==0.3.2
+
+# Sanitization
+bleach==1.5.0
+
+# Mail
+Flask-Mail==0.9.1
+
+# Database
+Flask-SQLAlchemy>=2.1
+SQLAlchemy==1.0.14
+sqlparse>=0.1.15
+psycopg2>=2.6
+
+# Serialization
+flask-marshmallow==0.6.2
+marshmallow-sqlalchemy==0.8.1
+PyJWT==1.4.0
+
+# Migrations
+Flask-Migrate>=2.0.0
+
+# Deployment
+gunicorn==19.3.0
+
+# SSL
+pyOpenSSL==0.15.1
+certifi==2015.4.28
+ndg-httpsclient==0.4.0
+pyasn1==0.1.7
+
+# Test
+coverage==4.2
+
+# Assets
+Flask-Assets==0.11
+cssmin>=0.2.0
+jsmin>=2.0.11
+stylus==0.1.2
+live-stylus==0.2.7

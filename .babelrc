@@ -1,0 +1,24 @@
+{
+  "presets": [
+    "es2015",
+    "react",
+    "stage-3"
+  ],
+  "env": {
+    "start": {
+      "presets": [
+        "react-hmre"
+      ]
+    }
+  },
+  "plugins": [
+      ["transform-es2015-template-literals"],
+      ["transform-es2015-arrow-functions", { "spec": true }],
+      ["transform-decorators-legacy"],
+      ["transform-class-properties"],
+      ["transform-runtime"],
+      ["transform-es2015-parameters"],
+      ["transform-object-assign"],
+      ["lodash"]
+    ]
+}

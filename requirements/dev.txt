@@ -1,0 +1,21 @@
+# Everything the developer needs in addition to the production requirements
+-r prod.txt
+
+# Testing
+pytest>=2.6.3
+webtest
+factory-boy==2.5.1
+coverage==4.2
+hacking==0.12.0
+
+# Devtool
+livereload==2.5.1
+
+# Management script
+Flask-Script
+
+# Deployments
+Fabric==1.11.1
+
+# Debug toolbar
+Flask-DebugToolbar==0.10.0
