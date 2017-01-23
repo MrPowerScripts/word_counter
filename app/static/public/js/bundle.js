@@ -41927,14 +41927,14 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'site-data-stat' },
-	            'Max ',
-	            this.state.highValue
+	            'Min ',
+	            this.state.lowValue
 	          ),
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'site-data-stat' },
-	            'Min ',
-	            this.state.lowValue
+	            'Max ',
+	            this.state.highValue
 	          ),
 	          _react2.default.createElement(
 	            'div',

@@ -166,8 +166,8 @@ export default class Site extends React.Component{
           <button className="button" onClick={ this.refreshFetch }>Fetch</button>
         </div>
         <div className="site-data-stats">
-          <div className="site-data-stat">Max {this.state.highValue}</div>
           <div className="site-data-stat">Min {this.state.lowValue}</div>
+          <div className="site-data-stat">Max {this.state.highValue}</div>
           <div className="site-data-stat">Total Words {this.state.totalValue}</div>
         </div>
         <div className="site-data">
