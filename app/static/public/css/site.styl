@@ -35,20 +35,41 @@
   background-color white
   margin-left .5rem
   border-radius 7px
+  border 1px solid rgba(0, 0, 0, 0.19)
   padding .5rem
 
 .site-data-item-container
   width 90vw
-  height 2rem
   display flex
   flex-flow column nowrap
   word-wrap break-word
+  &:hover
+  &:active
+    .site-data-item
+      display flex
+    .site-data-bar
+      background-color #BD5652
 
 .site-data-item
   color black
+  display none
+  flex-flow row wrap
 
 .site-data-bar
   transition width 400ms ease
-  background-color #BD5652
+  background-color #D48A87
   border-top 1px solid white
-  height 100%
+  height 1.5rem
+
+.word-count
+  padding .3rem
+
+.word-list
+  display flex
+  flex-flow row wrap
+
+.word
+  margin-left .3rem
+  background-color white
+  border 1px solid rgba(0, 0, 0, 0.19)
+  padding .3rem
