@@ -17,6 +17,9 @@ Flask-Admin==1.4.2
 # Compatibility
 Flask-Triangle==0.5.4
 
+# Parsing
+beautifulsoup4==4.5.1
+
 # Python
 requests==2.9.1
 mistune==0.7.2
