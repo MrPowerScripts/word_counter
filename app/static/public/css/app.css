@@ -13,6 +13,9 @@
 .last-updated {
   margin-top: 1rem;
 }
+.last-updated >a>div {
+  margin-top: 1rem;
+}
 .history {
   display: flex;
   flex-flow: row wrap;
@@ -51,23 +54,46 @@
   background-color: #fff;
   margin-left: 0.5rem;
   border-radius: 7px;
+  border: 1px solid rgba(0,0,0,0.19);
   padding: 0.5rem;
 }
 .site-data-item-container {
   width: 90vw;
-  height: 2rem;
   display: flex;
   flex-flow: column nowrap;
   word-wrap: break-word;
 }
+.site-data-item-container:hover .site-data-item,
+.site-data-item-container:active .site-data-item {
+  display: flex;
+}
+.site-data-item-container:hover .site-data-bar,
+.site-data-item-container:active .site-data-bar {
+  background-color: #bd5652;
+}
 .site-data-item {
   color: #000;
+  display: none;
+  flex-flow: row wrap;
 }
 .site-data-bar {
   transition: width 400ms ease;
-  background-color: #bd5652;
+  background-color: #d48a87;
   border-top: 1px solid #fff;
-  height: 100%;
+  height: 1.5rem;
+}
+.word-count {
+  padding: 0.3rem;
+}
+.word-list {
+  display: flex;
+  flex-flow: row wrap;
+}
+.word {
+  margin-left: 0.3rem;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.19);
+  padding: 0.3rem;
 }
 @import url("http://fonts.googleapis.com/css?family=Nunito|Lora");
 html,

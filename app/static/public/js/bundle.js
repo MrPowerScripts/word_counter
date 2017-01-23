@@ -41784,6 +41784,7 @@
 	        wordGroups[item.value].words.push(item.key);
 	      });
 	
+	      // merge words with similar frequency together
 	      var normalizedGroups = (0, _keys2.default)(wordGroups).map(function (key) {
 	        return { count: parseInt(key), words: wordGroups[key].words };
 	      });
@@ -41832,8 +41833,27 @@
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'site-data-item' },
-	            '' + item.count
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'word-count' },
+	              '' + item.count
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'word-list' },
+	              _this.getWords(item.words)
+	            )
 	          )
+	        );
+	      });
+	    };
+	
+	    _this.getWords = function (words) {
+	      return words.map(function (word) {
+	        return _react2.default.createElement(
+	          'div',
+	          { key: word, className: 'word' },
+	          word
 	        );
 	      });
 	    };
@@ -41926,11 +41946,6 @@
 	        _react2.default.createElement(
 	          'div',
 	          { className: 'site-data' },
-	          _react2.default.createElement(
-	            'div',
-	            { classname: 'scale' },
-	            _react2.default.createElement('div', { className: 'mid' })
-	          ),
 	          this.getDataNodes()
 	        )
 	      );
