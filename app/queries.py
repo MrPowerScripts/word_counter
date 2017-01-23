@@ -85,7 +85,7 @@ def get_url_data(data):
     JOIN url_content ON url_content.url_id = urls.id
     WHERE urls.url = %(url)s
     ORDER BY url_content.date_created DESC
-    LIMIT 10;
+    LIMIT 3;
     """, data)
 
     return g.cursor.fetchall()
