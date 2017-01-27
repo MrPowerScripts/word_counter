@@ -50,12 +50,14 @@ def submit_url(data):
     # Get the raw text from the lements
     for e in soup.findAll(["p", "span", "a", "h1", "h2",
                            "h3", "h4", "h5", "h6"]):
-        content_data['text_content'] += e.get_text()
+
+        logging.info(e.get_text() + " ")
+        content_data['text_content'] += e.get_text() + " "
 
     # Count all of the words in the content
     content_data['word_counts'] = \
         json.dumps(dict(Counter(w.lower() for w in re.findall(r"\w+",
-                   content_data['text_content']))))
+                   content_data['text_content'], re.UNICODE))))
 
     # Dump everything into the db
     g.cursor.execute("""
