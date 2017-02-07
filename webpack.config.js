@@ -11,28 +11,14 @@ module.exports = {
     path: BUILD_DIR,
     filename: 'bundle.js'
   },
-  resolve: {
-    alias: {
-      'react': path.join(__dirname, 'node_modules', 'react')
-    }
-  },
   module : {
     loaders : [
       {
         test : /\.jsx?/,
         exclude: /(node_modules|bower_components)|bundle.js|bundle.js.maps/,
-        query: {
-                plugins: [
-                  'transform-runtime',
-                  "transform-decorators-legacy",
-                  'transform-class-properties'],
-                presets: ['es2015','react', 'stage-3']
-              },
         include : BUILD_DIR,
         loader : 'babel-loader'
-      },
-      { test: /\.css$/, loader: "style-loader!css-loader" },
-      { test: /\.json$/, loader: "json-loader" }
+      }
     ]
   },
   plugins: [
@@ -45,5 +31,4 @@ module.exports = {
   watchOptions: {
     poll: true
   }
-
 };

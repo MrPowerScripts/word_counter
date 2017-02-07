@@ -10,6 +10,8 @@ migrations
 common.js
 common.css
 common.jsx
+bundle.js
+bundle.js.map
 .webassets-cache
 node_modules
 tmp

@@ -1,8 +1,5 @@
 from flask import Flask
 
-from .context_processors import (
-    utility_processor
-)
 from .extensions import (
     db,
     migrate
@@ -12,10 +9,9 @@ from . import (
     api
 )
 
-from app.settings import Config, ProdConfig, DevConfig, TestConfig
+from app.settings import Config, ProdConfig, DevConfig
 
 from assets import assets
-
 
 def create_app(config_object=ProdConfig):
     '''An application factory, as explained here:
@@ -28,7 +24,6 @@ def create_app(config_object=ProdConfig):
 
     register_blueprints(app)
     register_extensions(app)
-    register_context_processors(app)
     return app
 
 
@@ -42,9 +37,4 @@ def register_extensions(app):
 def register_blueprints(app):
     app.register_blueprint(api.controllers.mod_api, url_prefix='/api')
     app.register_blueprint(home.controllers.mod_home)
-    return None
-
-
-def register_context_processors(app):
-    app.context_processor(utility_processor)
     return None

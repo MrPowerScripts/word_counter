@@ -15,7 +15,7 @@ livereload==2.5.1
 Flask-Script
 
 # Deployments
-Fabric==1.11.1
+Fabric==1.13.0
 
 # Debug toolbar
 Flask-DebugToolbar==0.10.0
