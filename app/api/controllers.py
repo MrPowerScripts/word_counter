@@ -5,7 +5,7 @@ from flask import g, Blueprint, request, current_app, jsonify, Response
 from psycopg2.extras import RealDictCursor
 from app.queries import submit_url, get_url_data, get_recently_updated
 
-from app.database import db
+from app.extensions import db
 
 mod_api = Blueprint('api', __name__)
 
@@ -14,7 +14,7 @@ mod_api = Blueprint('api', __name__)
 def before_request():
     g.conn = psycopg2.connect("dbname='{0}' user='{1}'".format(
         current_app.config["SQLALCHEMY_DATABASE_URI"].split("///")[1],
-        current_app.config["WORD_MATCH_DB_USER"]))
+        current_app.config["DB_USER"]))
 
     g.cursor = g.conn.cursor(cursor_factory=RealDictCursor)
 

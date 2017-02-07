@@ -1,11 +1,6 @@
 from app.extensions import db
-import jwt
 import json
-import logging
-from flask_login import UserMixin
-from sqlalchemy.ext.hybrid import hybrid_method, hybrid_property
 from sqlalchemy.dialects.postgresql import JSONB, DOUBLE_PRECISION, TEXT
-from werkzeug.security import generate_password_hash, check_password_hash
 from sqlalchemy.orm import backref
 from sqlalchemy.sql import expression
 from sqlalchemy.ext.compiler import compiles

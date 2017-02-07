@@ -22,6 +22,7 @@ class Config(object):
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'migrations')
     DB_USER = getpass.getuser()
     DB_USER_PASSWORD = "postgres"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
 
     # Assets
     ASSETS_DEBUG = True

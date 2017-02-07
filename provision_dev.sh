@@ -15,6 +15,7 @@ sudo apt-get install libpq-dev libssl-dev python-pip python-virtualenv \
 
 echo "word - Installing NodeJS dependencies"
 sudo npm install -g stylus
+sudo npm install
 
 echo "word - Create virtual environment.."
 
@@ -27,9 +28,14 @@ pip install -r requirements/dev.txt
 echo "word - Setting up database.."
 
 sudo -u postgres psql -c "CREATE ROLE $(whoami) WITH SUPERUSER CREATEDB CREATEROLE INHERIT LOGIN;"
+sudo -u postgres psql -c "CREATE DATABASE $(whoami);"
 sudo -u postgres psql -c "ALTER ROLE postgres WITH PASSWORD 'postgres';"
-sudo -u postgres psql -c "CREATE DATABASE rootuser;"
+sudo -u postgres psql -c "CREATE DATABASE wordapp;"
 
 echo " - Running resetdb.."
 
 mkdir logs
+
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
