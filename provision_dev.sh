@@ -11,7 +11,7 @@ sudo apt-get update
 
 sudo apt-get install libpq-dev libssl-dev python-pip python-virtualenv \
                      python-dev postgresql postgresql-contrib \
-                     nodejs build-essential -y
+                     nodejs build-essential libffi-dev -y
 
 echo "word - Installing NodeJS dependencies"
 sudo npm install -g stylus
