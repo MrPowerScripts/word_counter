@@ -9,7 +9,7 @@ sudo wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | sudo apt-
 curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 sudo apt-get update
 
-sudo apt-get install libpq-dev python-pip python-virtualenv \
+sudo apt-get install libpq-dev libssl-dev python-pip python-virtualenv \
                      python-dev postgresql postgresql-contrib \
                      nodejs build-essential -y
 
